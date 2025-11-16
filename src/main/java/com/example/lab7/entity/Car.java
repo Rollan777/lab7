@@ -3,6 +3,9 @@ package com.example.lab7.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -18,4 +21,19 @@ public class Car {
     private String model;
     private int year;
     private double price;
+
+    // Many cars belong to one owner
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
+
+    // Many-to-many with features
+    @ManyToMany
+    @JoinTable(
+            name = "car_features",
+            joinColumns = @JoinColumn(name = "car_id"),
+            inverseJoinColumns = @JoinColumn(name = "feature_id")
+    )
+    @Builder.Default
+    private List<Feature> features = new ArrayList<>();
 }
