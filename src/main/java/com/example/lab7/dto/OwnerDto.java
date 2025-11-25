@@ -10,6 +10,5 @@ public class OwnerDto {
 
     private Long id;
     private String name;
-    // email можно отдать, а можно скрыть — зависит от требований
     private String email;
 }

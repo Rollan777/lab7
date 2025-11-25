@@ -1,22 +1,17 @@
-package com.example.lab7.dto;
+package com.example.lab7.dto.car;
 
-import lombok.*;
-
+import com.example.lab7.dto.FeatureDto;
+import com.example.lab7.dto.OwnerDto;
+import lombok.Data;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class CarDto {
-
+public class CarFullDto {
     private Long id;
     private String brand;
     private String model;
     private int year;
     private double price;
-
     private OwnerDto owner;
-
     private List<FeatureDto> features;
 }

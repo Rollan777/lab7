@@ -22,12 +22,10 @@ public class Car {
     private int year;
     private double price;
 
-    // Many cars belong to one owner
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    // Many-to-many with features
     @ManyToMany
     @JoinTable(
             name = "car_features",

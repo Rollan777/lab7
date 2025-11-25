@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.10.xsd">
+
+    <changeSet id="005" author="rollan">
+
+        <insert tableName="item">
+            <column name="name" value="iPhone 15"/>
+            <column name="price" value="500000"/>
+            <column name="country_id" value="2"/>
+        </insert>
+
+        <insert tableName="item">
+            <column name="name" value="Tesla Model Y"/>
+            <column name="price" value="30000000"/>
+            <column name="country_id" value="2"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
